@@ -15,9 +15,10 @@
 -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <demo.randompage.modules.main.SquareFrameLayout
           android:layout_width="match_parent"
@@ -27,6 +28,7 @@
               android:id="@+id/imageview_item"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+            android:background="@drawable/img_startpage_qrcode"
               android:scaleType="centerCrop" />
 
     </demo.randompage.modules.main.SquareFrameLayout>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RandomPage</string>
+    <string name="image_header">%1$s by %2$s</string>
+
 </resources>
