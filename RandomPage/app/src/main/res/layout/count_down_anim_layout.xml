@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center_vertical"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:shadowColor="@color/orange"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="8"
+        android:textColor="@color/orange"
+        android:textSize="120sp"
+        android:textStyle="normal"
+        android:visibility="visible"/>
+
+</FrameLayout>

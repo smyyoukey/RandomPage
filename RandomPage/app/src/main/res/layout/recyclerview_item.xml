@@ -28,7 +28,6 @@
               android:id="@+id/imageview_item"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-            android:background="@drawable/img_startpage_qrcode"
               android:scaleType="centerCrop" />
 
     </demo.randompage.modules.main.SquareFrameLayout>
@@ -37,8 +36,10 @@
         android:id="@+id/textview_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="#000"
         android:maxLines="1"
+        android:textStyle="italic"
+        android:textColor="#fff"
         android:padding="16dp" />
 
 </LinearLayout>

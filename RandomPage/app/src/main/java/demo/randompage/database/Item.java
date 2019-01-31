@@ -51,9 +51,10 @@ public class Item {
     private final String mAuthor;
     private final String mFileName;
 
-     Item(String name, String author, String fileName) {
+    Item(String name, String author, String fileName) {
         mName = name;
-        mAuthor = author;
+//        mAuthor = author;
+        mAuthor = "test";
         mFileName = fileName;
     }
 

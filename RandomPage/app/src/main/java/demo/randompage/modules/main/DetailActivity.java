@@ -17,18 +17,21 @@
 package demo.randompage.modules.main;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v4.view.ViewCompat;
 import android.transition.Transition;
+import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.squareup.picasso.Picasso;
-
 import demo.randompage.R;
 import demo.randompage.database.Item;
+import demo.randompage.modules.FloatView.FloatingManager;
+
 
 /**
  * Our secondary Activity which is launched from {@link MainActivity}. Has a simple detail UI
@@ -47,19 +50,66 @@ public class DetailActivity extends Activity {
 
     private ImageView mHeaderImageView;
     private TextView mHeaderTitle;
-
+//    private FloatManager mFloatManager;
+//    private View mFloatV;
+//    private FloatCountDownView floatCountDownView;
     private Item mItem;
+    private int mPage;
+    private FloatingManager floatingManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details);
-
+        floatingManager = new FloatingManager(this);
         // Retrieve the correct Item instance, using the ID provided in the Intent
+
+
+
+        Log.d("Item","ID =    "+getIntent().getIntExtra(EXTRA_PARAM_ID, 0));
         mItem = Item.getItem(getIntent().getIntExtra(EXTRA_PARAM_ID, 0));
+
+//        floatCountDownView = new FloatCountDownView(this);
+
 
         mHeaderImageView = (ImageView) findViewById(R.id.imageview_header);
         mHeaderTitle = (TextView) findViewById(R.id.textview_title);
+        TextView button = (TextView)findViewById(R.id.tv_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent;
+                switch (mPage){
+                    case 1:
+                         intent = new Intent(DetailActivity.this, NetTestActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                         intent = new Intent(DetailActivity.this, TransitionActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 3:
+//                        if(mFloatV!=null) {
+//                            mFloatManager.showFloatWindow(DetailActivity.this,floatCountDownView, 0, 0);
+//                        }
+                        floatingManager.open();
+                        break;
+                }
+
+
+            }
+        });
+        button.setVisibility(View.GONE);
+        if(mItem.getId() == -1563809810){
+            mPage = 1;
+            button.setVisibility(View.VISIBLE);
+        }else if(mItem.getId() == 1166898733){
+            mPage = 2;
+            button.setVisibility(View.VISIBLE);
+        }else if(mItem.getId() == -1869846959){
+            mPage = 3;
+            button.setVisibility(View.VISIBLE);
+        }
 
         // BEGIN_INCLUDE(detail_set_view_name)
         /**
@@ -70,9 +120,38 @@ public class DetailActivity extends Activity {
         ViewCompat.setTransitionName(mHeaderImageView, VIEW_NAME_HEADER_IMAGE);
         ViewCompat.setTransitionName(mHeaderTitle, VIEW_NAME_HEADER_TITLE);
         // END_INCLUDE(detail_set_view_name)
-
+//        floatView();
         loadItem();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        floatingManager.close();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+//         invalid   method
+//    private void floatView() {
+//        LayoutInflater layoutInflater = (LayoutInflater)
+//                getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//        mFloatV = layoutInflater.from(this).inflate(R.layout.float_window_main_layout,null);
+//        mFloatManager = FloatManager.getInstance();
+//
+//    }
 
     private void loadItem() {
         // Set the title TextView to the item's name and author

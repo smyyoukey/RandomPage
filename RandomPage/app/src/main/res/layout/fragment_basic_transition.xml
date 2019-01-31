@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright 2014 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/normal_padding"
+    android:paddingLeft="@dimen/normal_padding"
+    android:paddingRight="@dimen/normal_padding"
+    android:paddingTop="@dimen/normal_padding"
+    android:id="@+id/main_scene"
+    tools:context=".modules.main.TransitionActivity">
+    <include layout="@layout/tool_bar">
+    </include>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scene"/>
+    <demo.randompage.modules.ThirdView.StringScrollPicker
+        android:id="@+id/scroll_selected"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        app:spv_orientation="horizontal"
+        app:spv_center_item_background="#22888888"
+        app:spv_disallow_intercept_touch="true"
+        app:spv_max_text_size="30dp"
+        app:spv_min_text_size="24dp"
+        app:spv_visible_item_count="3"
+        />
+
+
+    <FrameLayout
+        android:id="@+id/scene_root"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include layout="@layout/scene1"/>
+
+    </FrameLayout>
+
+</LinearLayout>
