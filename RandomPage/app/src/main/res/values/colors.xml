@@ -8,4 +8,16 @@
     <color name="orange">#FF6E10</color>
     <color name="red">#FF1F43</color>
     <color name="red_shallow">#ff4a49</color>
+
+
+    <color name="theme_focus_2">#fff692</color>
+    <color name="theme_focus_3">#00fff6</color>
+    <color name="theme_focus_4">#ffa1c0</color>
+    <color name="theme_focus_5">#c0ff00</color>
+    <color name="theme_focus_6">#00fff6</color>
+
+    <color name="style_1_0">#FF4545</color>
+    <color name="style_1_1">#FF9867</color>
+    <color name="style_1_2">#FFBF87</color>
+    <color name="style_1_3">#FFEDB2</color>
 </resources>

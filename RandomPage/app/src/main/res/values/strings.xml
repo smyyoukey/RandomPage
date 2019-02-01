@@ -32,4 +32,8 @@
     <string name="tips_not_wifi_cancel">Stop play</string>
     <string name="no_url">No url</string>
     <string name="replay">Replay</string>
+
+    <!--for call-->
+    <string name="call_number">18170930921</string>
+    <string name="call_time">00:01</string>
 </resources>

@@ -6,4 +6,18 @@
     <!--player-->
     <dimen name="jc_start_button_w_h_normal">45dp</dimen>
     <dimen name="jc_start_button_w_h_fullscreen">62dp</dimen>
+
+
+    <!-- for global text -->
+    <dimen name="text_size_title_x">36sp</dimen>
+    <dimen name="text_size_title">32sp</dimen>
+
+    <dimen name="text_size_huge_xxxx">24sp</dimen>
+    <dimen name="text_size_huge_xx">20sp</dimen>
+    <dimen name="text_size_huge_x">18sp</dimen>
+    <dimen name="text_size_huge">16sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_minor">10sp</dimen>
+
 </resources>

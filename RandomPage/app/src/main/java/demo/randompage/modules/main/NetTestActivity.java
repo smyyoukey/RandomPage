@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -16,6 +17,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 import demo.randompage.R;
+import demo.randompage.modules.sevices.MainService;
 
 /**
  * Created by smy on 18-3-15.
@@ -24,13 +26,24 @@ import demo.randompage.R;
 public class NetTestActivity extends AppCompatActivity {
     public static final String THEME_DATA_NAME = "ThemeData.json";
     public static final String DEFAULT_FOLDER_NAME = "FlashLight";
+
+   private TextView mNumber;
+    private TextView mTime;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_testnet);
 
-     String name = getGifFolderName("Test",false);
+        initView();
+        MainService.startMainService(this);
+        String name = getGifFolderName("Test",false);
         Log.d("test","name = "+name);
+
+
+    }
+    private void initView() {
+         mNumber = (TextView)findViewById(R.id.tv_number);
+         mTime = (TextView)findViewById(R.id.tv_time);
 
     }
 

@@ -143,6 +143,7 @@ public class DetailActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        floatingManager.close();
     }
 //         invalid   method
 //    private void floatView() {
