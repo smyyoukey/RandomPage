@@ -4,20 +4,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.transition.Scene;
 import android.transition.TransitionInflater;
 import android.transition.TransitionManager;
 import android.util.AttributeSet;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import java.util.Arrays;
-import java.util.zip.Inflater;
 
 import demo.randompage.R;
 import demo.randompage.modules.ThirdView.ScrollPickerView;

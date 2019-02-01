@@ -1,26 +1,14 @@
 package demo.randompage.modules.main;
 
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ImageView;
-
-import com.squareup.picasso.Picasso;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 import demo.randompage.R;
-import demo.randompage.database.Item;
-import demo.randompage.modules.FloatView.FloatManager;
-import demo.randompage.modules.FloatView.FloatWindow;
 
 public class MainActivity extends AppCompatActivity {
 
