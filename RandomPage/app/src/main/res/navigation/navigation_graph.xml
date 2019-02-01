@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainActivity">
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="demo.randompage.modules.main.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_mainActivity_to_detailActivity"
+            app:destination="@id/detailActivity" />
+    </activity>
+    <activity
+        android:id="@+id/detailActivity"
+        android:name="demo.randompage.modules.main.DetailActivity"
+        android:label="details"
+        tools:layout="@layout/details" >
+        <action
+            android:id="@+id/action_detailActivity_to_netTestActivity"
+            app:destination="@id/netTestActivity" />
+        <action
+            android:id="@+id/action_detailActivity_to_transitionActivity"
+            app:destination="@id/transitionActivity" />
+    </activity>
+    <activity
+        android:id="@+id/netTestActivity"
+        android:name="demo.randompage.modules.main.NetTestActivity"
+        android:label="activity_testnet"
+        tools:layout="@layout/activity_testnet" />
+    <activity
+        android:id="@+id/transitionActivity"
+        android:name="demo.randompage.modules.main.TransitionActivity"
+        android:label="fragment_basic_transition"
+        tools:layout="@layout/fragment_basic_transition" />
+
+</navigation>
